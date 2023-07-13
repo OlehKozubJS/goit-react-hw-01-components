@@ -1,3 +1,4 @@
+import { Component } from "react";
 import { Profile } from "./Profile.jsx";
 import { Statistics } from "./Statistics.jsx";
 import { FriendList } from "./FriendList.jsx";

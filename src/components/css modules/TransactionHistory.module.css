@@ -1,0 +1,17 @@
+.tableHeadline,
+.tableData {
+    width: 100px;
+    text-align: center;
+}
+
+.tableHeadline {
+    color: green;
+    font-weight: bold;
+}
+
+.tableData {
+    color:blue;
+}
+
+
+

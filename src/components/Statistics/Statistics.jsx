@@ -3,17 +3,9 @@ import general from "../General.module.css";
 import propTypes from 'prop-types';
 
 export const Statistics = ({title, stats}) => {
-    let titleString;
-    if (title === undefined) {
-        titleString = "";
-    }
-    else {
-        titleString = <h2 className={css.title}>{title}</h2>;
-    }
-
     return (
         <section className={css.statistics + " " + general.container}>
-            {titleString}
+            {title === undefined ? "" : <h2 className={css.title}>{title}</h2>}
 
             <ul className={css.statList}>
                 {

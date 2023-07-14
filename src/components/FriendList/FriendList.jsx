@@ -1,5 +1,6 @@
 import css from "./FriendList.module.css";
 import general from "../General.module.css";
+import propTypes from 'prop-types';
 
 export const FriendList = ({friends}) => {
     let friendListItems = [];
@@ -29,3 +30,4 @@ export const FriendList = ({friends}) => {
         </ul>
     );
 }
+

@@ -3,8 +3,7 @@ import general from "../General.module.css";
 import propTypes from 'prop-types';
 
 export const FriendList = ({friends}) => {
-    let friendListItems = [];
-    friends.forEach(       
+    let friendListItems = friends.map(       
         friend => {
             let statusValue = css.status + " ";
             if (friend.isOnline) {
@@ -14,7 +13,7 @@ export const FriendList = ({friends}) => {
                 statusValue += css.offline;
             }
 
-            friendListItems.push(
+            return (
                 <li className={css.friendListItem + " " + general.item} key={friend.id}>
                     <span className={statusValue}></span>
                     <img className={css.avatar} src={friend.avatar} alt={friend.name} width="48" />

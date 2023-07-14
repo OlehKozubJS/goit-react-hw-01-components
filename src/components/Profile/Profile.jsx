@@ -37,7 +37,8 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
 Profile.propTypes = {
     username: propTypes.string.isRequired,
     tag: propTypes.string.isRequired,
-    location: propTypes.shape({
+    location: propTypes.string.isRequired,
+    stats: propTypes.shape({
         followers: propTypes.number.isRequired,
         vievs: propTypes.number.isRequired,
         likes: propTypes.number.isRequired,

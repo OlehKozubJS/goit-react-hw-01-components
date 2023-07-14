@@ -1,4 +1,4 @@
-import css from "./css modules/FriendList.module.css";
+import css from "./FriendList.module.css";
 import general from "./General.module.css";
 
 export const FriendList = ({friends}) => {

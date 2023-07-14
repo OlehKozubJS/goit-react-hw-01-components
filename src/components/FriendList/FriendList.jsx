@@ -1,5 +1,5 @@
 import css from "./FriendList.module.css";
-import general from "./General.module.css";
+import general from "../General.module.css";
 
 export const FriendList = ({friends}) => {
     let friendListItems = [];

@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 export const Statistics = ({title, stats}) => {
     return (
         <section className={`${css.statistics} ${general.container}`}>
-            {title === undefined ? "" : <h2 className={css.title}>{title}</h2>}
+            {title && <h2 className={css.title}>{title}</h2>}
 
             <ul className={css.statList}>
                 {

@@ -1,5 +1,5 @@
 import css from "./TransactionHistory.module.css";
-import general from "./General.module.css";
+import general from "../General.module.css";
 
 export const TransactionHistory = ({items}) => {
     let transactionsItems = [];

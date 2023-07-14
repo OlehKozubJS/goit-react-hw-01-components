@@ -1,5 +1,5 @@
-import css from "./css modules/Statistics.module.css";
-import general from "./css modules/General.module.css";
+import css from "./Statistics.module.css";
+import general from "./General.module.css";
 
 export const Statistics = ({title, stats}) => {
     let titleString;

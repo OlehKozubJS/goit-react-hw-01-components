@@ -1,5 +1,6 @@
 import css from "./Statistics.module.css";
 import general from "../General.module.css";
+import propTypes from 'prop-types';
 
 export const Statistics = ({title, stats}) => {
     let titleString;
@@ -29,4 +30,17 @@ export const Statistics = ({title, stats}) => {
             </ul>
         </section>
     );
+}
+
+Statistics.propTypes = {
+    title: propTypes.string.isRequired,
+    stats: propTypes.arrayOf(
+        propTypes.shape(
+            {
+                id: propTypes.string.isRequired,
+                label: propTypes.string.isRequired,
+                percentage: propTypes.number.isRequired,
+            }
+        )
+    ).isRequired,
 }

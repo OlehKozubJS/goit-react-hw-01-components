@@ -3,17 +3,6 @@ import general from "../General.module.css";
 import propTypes from 'prop-types';
 
 export const TransactionHistory = ({items}) => {
-    let transactionsItems = [];
-    items.forEach(transaction => {
-        transactionsItems.push(
-            <tr key={transaction.id}>
-                <td className={css.tableData + " " + general.item}>{transaction.type}</td>
-                <td className={css.tableData + " " + general.item}>{transaction.amount}</td>
-                <td className={css.tableData + " " + general.item}>{transaction.currency}</td>
-            </tr>
-        )
-    });    
-    
     return (
         <table className={general.container}>
             <thead>
@@ -25,7 +14,15 @@ export const TransactionHistory = ({items}) => {
             </thead>
 
             <tbody>
-                {transactionsItems}
+                {
+                    items.map(transaction =>
+                        <tr key={transaction.id}>
+                            <td className={css.tableData + " " + general.item}>{transaction.type}</td>
+                            <td className={css.tableData + " " + general.item}>{transaction.amount}</td>
+                            <td className={css.tableData + " " + general.item}>{transaction.currency}</td>
+                        </tr>
+                    )
+                }
             </tbody>
         </table>
     );

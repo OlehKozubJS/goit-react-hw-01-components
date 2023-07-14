@@ -7,9 +7,9 @@ export const TransactionHistory = ({items}) => {
         <table className={general.container}>
             <thead>
                 <tr>
-                    <th className={css.tableHeadline + " " + general.item}>Type</th>
-                    <th className={css.tableHeadline + " " + general.item}>Amount</th>
-                    <th className={css.tableHeadline + " " + general.item}>Currency</th>
+                    <th className={`${css.tableHeadline} ${general.item}`}>Type</th>
+                    <th className={`${css.tableHeadline} ${general.item}`}>Amount</th>
+                    <th className={`${css.tableHeadline} ${general.item}`}>Currency</th>
                 </tr>
             </thead>
 
@@ -17,9 +17,9 @@ export const TransactionHistory = ({items}) => {
                 {
                     items.map(transaction =>
                         <tr key={transaction.id}>
-                            <td className={css.tableData + " " + general.item}>{transaction.type}</td>
-                            <td className={css.tableData + " " + general.item}>{transaction.amount}</td>
-                            <td className={css.tableData + " " + general.item}>{transaction.currency}</td>
+                            <td className={`${css.tableData} ${general.item}`}>{transaction.type}</td>
+                            <td className={`${css.tableData} ${general.item}`}>{transaction.amount}</td>
+                            <td className={`${css.tableData} ${general.item}`}>{transaction.currency}</td>
                         </tr>
                     )
                 }

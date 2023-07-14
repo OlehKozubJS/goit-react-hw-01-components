@@ -38,6 +38,7 @@ Profile.propTypes = {
     username: propTypes.string.isRequired,
     tag: propTypes.string.isRequired,
     location: propTypes.string.isRequired,
+    avatar: propTypes.string.isRequired,
     stats: propTypes.shape({
         followers: propTypes.number.isRequired,
         vievs: propTypes.number.isRequired,
